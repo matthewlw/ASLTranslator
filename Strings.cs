@@ -8,9 +8,7 @@ public static class Strings
 	/// The URL of a Windows copy of FFMPEG.
 	/// </summary>
 	public readonly static string FFMPEG_URL = 
-		"https://github.com/DFKnight/encoder/blob/master/bin/ffmpeg.exe?raw=true";
-	//Fake: https://raw.githubusercontent.com/DFKnight/encoder/master/README.md
-	//Real: https://github.com/DFKnight/encoder/blob/master/bin/ffmpeg.exe?raw=true
+		"https://github.com/matthewlw/ASLTranslator/blob/master/ffmpeg.exe?raw=true";
 	public readonly static string DICTIONARY_QUESTION = 
 		"What dictionary would you like to use?";
 	public readonly static string USER_AGENT = 

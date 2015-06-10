@@ -37,7 +37,7 @@ namespace ASLSitesClient
 			
 				const string argumentsFormat = "-i \"{0}\" -f mpeg \"{1}\"";
 				var info = new ProcessStartInfo();
-				info.FileName = "ffmpeg";
+				info.FileName = Paths.FFMPEG;
 				info.Arguments = String.Format(argumentsFormat, downloadDestination, finalDestination);
 				info.RedirectStandardOutput = true;
 				info.RedirectStandardError = true;

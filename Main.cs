@@ -43,8 +43,7 @@ namespace ASLSitesClient
 				string outFile = downloader.Download(resolvedWords);
 				Console.WriteLine("The video is saved at {0}", outFile);
 				Console.Write("Would you like to play that now (y/n)? ");
-				//LINUX-SPECIFIC
-				if (Console.ReadLine() == "y") Process.Start("mplayer", outFile).WaitForExit();
+				if (Console.ReadLine() == "y") Process.Start(outFile).WaitForExit();
 			} 
 		}
 		
