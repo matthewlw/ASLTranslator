@@ -1,0 +1,6 @@
+/home/matthew/reverse/asl/ASLSitesClient/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/matthew/reverse/asl/ASLSitesClient/bin/Debug/ASLSitesClient.exe.mdb
+/home/matthew/reverse/asl/ASLSitesClient/bin/Debug/ASLSitesClient.exe
+/home/matthew/reverse/asl/ASLSitesClient/obj/x86/Debug/ASLSitesClient.exe
+/home/matthew/reverse/asl/ASLSitesClient/obj/x86/Debug/ASLSitesClient.exe.mdb
+/home/matthew/reverse/asl/ASLSitesClient/bin/Debug/CsQuery.dll
