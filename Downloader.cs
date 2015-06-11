@@ -21,7 +21,9 @@ namespace ASLSitesClient
 				sourcePaths.Add(Download(word));
 			}
 			string destinationPath = GetFileName();
-			Concatenate(destinationPath, sourcePaths.ToArray());
+			Concatenate(destinationPath + ".tmp.mpg", sourcePaths.ToArray());
+			RunFFMPEG(String.Format("-i {0}.tmp.mpg {0}", destinationPath));
+			File.Delete(destinationPath + ".tmp.mpg");
 			return destinationPath;
 		}
 		string Download(DictionaryWord word) {
@@ -64,15 +66,26 @@ namespace ASLSitesClient
 			string[] files = Directory.EnumerateFiles(currentDirectory).ToArray();
 			string[] justNames = files.Select(file => Path.GetFileName(file)).ToArray();
 			string[] formattedFiles = justNames.Where(
-				file => file.StartsWith("video") && file.EndsWith(".mpg")).ToArray();
+				file => file.StartsWith("video") && file.EndsWith(".mp4")).ToArray();
 			int fileNumber = 0;
 			foreach (string file in formattedFiles) {
-				string cleaned = file.Replace("video", "").Replace(".mpg", "");
+				string cleaned = file.Replace("video", "").Replace(".mp4", "");
 				int temp;
 				if (int.TryParse(cleaned, out temp) && temp > fileNumber) fileNumber = temp;
 			}
 			fileNumber++;
-			return "video" + fileNumber + ".mpg";
+			return "video" + fileNumber + ".mp4";
+		}
+		static void RunFFMPEG(string arguments) {
+			var info = new ProcessStartInfo();
+			info.FileName = Paths.FFMPEG;
+			info.Arguments = arguments;
+			info.RedirectStandardOutput = true;
+			info.RedirectStandardError = true;
+			info.UseShellExecute = false;
+			var process = Process.Start(info);
+			process.WaitForExit();
+			process.Dispose();
 		}
 		protected virtual void OnWordDownloaded (WordDownloadedEventArgs e) {
 			WordDownloaded(this, e);
