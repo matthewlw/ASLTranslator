@@ -22,7 +22,7 @@ namespace ASLSitesClient
 			}
 			string destinationPath = GetFileName();
 			Concatenate(destinationPath + ".tmp.mpg", sourcePaths.ToArray());
-			RunFFMPEG(String.Format("-i {0}.tmp.mpg {0}", destinationPath));
+			RunFFMPEG(String.Format("-i \"{0}.tmp.mpg\" \"{0}\"", destinationPath));
 			File.Delete(destinationPath + ".tmp.mpg");
 			return destinationPath;
 		}
