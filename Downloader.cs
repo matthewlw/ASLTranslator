@@ -79,10 +79,7 @@ namespace ASLSitesClient
 		static void RunFFMPEG(string arguments) {
 			var info = new ProcessStartInfo();
 			info.FileName = Paths.FFMPEG;
-			info.Arguments = arguments;
-			info.RedirectStandardOutput = true;
-			info.RedirectStandardError = true;
-			info.UseShellExecute = false;
+			info.Arguments = "-loglevel -8 " + arguments;
 			Process.Start(info).WaitForExit();
 		}
 		protected virtual void OnWordDownloaded (WordDownloadedEventArgs e) {
