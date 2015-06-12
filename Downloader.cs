@@ -41,8 +41,8 @@ namespace ASLSitesClient
 				var info = new ProcessStartInfo();
 				info.FileName = Paths.FFMPEG;
 				info.Arguments = String.Format(argumentsFormat, downloadDestination, finalDestination);
-				info.RedirectStandardOutput = true;
-				info.RedirectStandardError = true;
+				info.RedirectStandardOutput = false;
+				info.RedirectStandardError = false;
 				info.UseShellExecute = false;
 				Process.Start(info).WaitForExit();
 				File.Delete(downloadDestination);
