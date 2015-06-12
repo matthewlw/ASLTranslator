@@ -83,9 +83,7 @@ namespace ASLSitesClient
 			info.RedirectStandardOutput = true;
 			info.RedirectStandardError = true;
 			info.UseShellExecute = false;
-			var process = Process.Start(info);
-			System.Threading.Thread.Sleep(15000);
-			process.Kill();
+			Process.Start(info).WaitForExit();
 		}
 		protected virtual void OnWordDownloaded (WordDownloadedEventArgs e) {
 			WordDownloaded(this, e);
