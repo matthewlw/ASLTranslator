@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="ASLSitesClient.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Strings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BaseDictionary.cs">
     <Files>
-      <File FileName="WordResolver.cs" Line="70" Column="20" />
-      <File FileName="Strings.cs" Line="27" Column="51" />
-      <File FileName="Main.cs" Line="69" Column="72" />
-      <File FileName="Downloader.cs" Line="43" Column="34" />
+      <File FileName="WordResolver.cs" Line="69" Column="2" />
+      <File FileName="Strings.cs" Line="27" Column="34" />
+      <File FileName="Main.cs" Line="14" Column="40" />
+      <File FileName="Downloader.cs" Line="24" Column="47" />
       <File FileName="Paths.cs" Line="1" Column="1" />
       <File FileName="BaseDictionary.cs" Line="1" Column="1" />
     </Files>
